@@ -1,0 +1,40 @@
+<settings>
+    <mirrors>
+        <mirror>
+            <id>tt-nexus</id>
+            <name>Org Nexus Public Mirror</name>
+            <url>https://nexus.org.com/repository/maven-public/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+    <servers>
+        <server>
+            <id>tt-nexus</id>
+            <username>ci-nexus-user</username>
+            <password>Humppa107</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>tt-nexus</id>
+                    <url>https://nexus.org.com/repository/maven-snapshots/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>tt-nexus</id>
+                    <url>https://nexus.org.com/repository/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+</settings>
